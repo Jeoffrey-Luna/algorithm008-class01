@@ -3,9 +3,9 @@ class Solution:
         i = 0
         j = i+1
         indices = []
-        while i < len(nums):
-            while j < len(nums)-1:
-                if nums[j] == target - nums[i] and i !=j:
+        for i in range(len(nums)):
+            for j in range(len(nums)):
+                if nums[i] == target - nums[j] and i !=j:
                    indices.append(i)
                    indices.append(j)
                    return indices
